@@ -5,9 +5,9 @@ which unlocks regional limitations, limited and paid songs.
 
 网易云音乐客户端的反代，解除海外限制，并且可播放下架歌曲和付费歌曲（暂不能收藏）。
 
-更新 [@qq316107934](https://github.com/qq316107934) 分享的收藏歌曲的方法：
-
-> 点击下载，然后选择一个歌单，再把下载文件删除，就躺在歌单里了。亲测有效。
+2016.5.21 已兼容全平台客户端的最新版本(OSX 1.4.4, IOS 3.5.0, Android 3.4.1, Windows 2.0.3)  
+2016.5.10 增加PAC代理（速度快多了，设置方法见下）  
+2016.5.6 OSX客户端请降回[1.4.3客户端版本](http://s1.music.126.net/download/osx/NeteaseMusic_1.4.3_452_web.dmg)
 
 2016.4.5 增加一台分流服务器  
 2016.4.4 迁移API服务器，加快版权歌曲的加载速度  
@@ -16,6 +16,7 @@ which unlocks regional limitations, limited and paid songs.
 * 安卓客户端   
 * IOS客户端  
 * OSX客户端  
+* Windows客户端  
 
 当前可用host列表如下，如果加载速度缓慢可尝试换一个服务器:  
 
@@ -24,6 +25,14 @@ which unlocks regional limitations, limited and paid songs.
 
 Usage
 -----
+
+Use PAC configuration(Recommended. Much faster.):  
+```
+http://119.29.154.223:8085/neteasecloudmusic.pac
+```
+
+Or you can just modify your `hosts` settings as follows.
+
 On your device, add a custom DNS rule to the `hosts` file:
 
     103.27.77.201 music.163.com
@@ -33,6 +42,10 @@ to use `Surge` to create configuration with custom DNS maps.
 
 自行部署方法
 ----------
+
+> 放出来的代码是3月底的版本，早就不可用了，不要尝试部署了。  
+> 树大招风，闷声发大财。真正的代码不会开源。
+
 * 安装Python依赖  
 ```
 # pip install flask requests
